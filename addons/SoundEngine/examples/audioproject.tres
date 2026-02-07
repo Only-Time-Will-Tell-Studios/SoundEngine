@@ -1,0 +1,7 @@
+[gd_resource type="AudioStreamInteractive" script_class="AudioProject" format=3 uid="uid://b3e85mk342l87"]
+
+[ext_resource type="Script" uid="uid://l41dlqtwmbpl" path="res://addons/SoundEngine/src/audio_project.gd" id="1_iurqn"]
+
+[resource]
+script = ExtResource("1_iurqn")
+metadata/_custom_type_script = "uid://l41dlqtwmbpl"

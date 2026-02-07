@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://dt65gehcotrik"]
+
+[ext_resource type="Script" uid="uid://duoudexwo764l" path="res://addons/SoundEngine/src/audio_main_panel.gd" id="1"]
+[ext_resource type="Script" uid="uid://cqrgfc5v0uv2m" path="res://addons/SoundEngine/src/timeline_editor.gd" id="2"]
+
+[node name="AudioMainPanel" type="Control" unique_id=1246531460]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+
+[node name="HBox" type="HBoxContainer" parent="." unique_id=336834783]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="LeftVBox" type="VBoxContainer" parent="HBox" unique_id=1004056004]
+layout_mode = 2
+
+[node name="OpenButton" type="Button" parent="HBox/LeftVBox" unique_id=1562504689]
+layout_mode = 2
+text = "Refresh Projects"
+
+[node name="ProjectList" type="ItemList" parent="HBox/LeftVBox" unique_id=608091641]
+layout_mode = 2
+auto_height = true
+item_count = 2
+item_0/text = "res://addons/audio_editor/audioproject.tres"
+item_1/text = "res://nhfuehfuehfeufehbfehbfeh.tres"
+
+[node name="CreateButton" type="Button" parent="HBox/LeftVBox" unique_id=366023410]
+layout_mode = 2
+text = "Create New Project..."
+
+[node name="AddTrackButton" type="Button" parent="HBox/LeftVBox" unique_id=628265710]
+layout_mode = 2
+text = "Add Track"
+
+[node name="PlayButton" type="Button" parent="HBox/LeftVBox" unique_id=1769361650]
+layout_mode = 2
+text = "Play"
+
+[node name="StopButton" type="Button" parent="HBox/LeftVBox" unique_id=645050052]
+layout_mode = 2
+text = "Stop"
+
+[node name="FileDialog" type="FileDialog" parent="HBox/LeftVBox" unique_id=163554096]
+oversampling_override = 1.0
+title = "Create an AudioProject"
+initial_position = 2
+transient_to_focused = true
+unresizable = true
+popup_window = true
+
+[node name="RightVBox" type="VBoxContainer" parent="HBox" unique_id=1281862698]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TimelineContainer" type="Panel" parent="HBox/RightVBox" unique_id=201414403]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+script = ExtResource("2")
+
+[node name="TimelineEditor" type="Control" parent="HBox/RightVBox/TimelineContainer" unique_id=2090482306]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
